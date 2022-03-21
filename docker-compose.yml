@@ -7,11 +7,7 @@ services:
         container_name: nginx
         ports:
             - '80:80'
-    app:
-        build: ./apps
-        container_name: apps
-        ports:
-            - '3000:3000'
+
 
     jenkins:
         build: ./jenkins
