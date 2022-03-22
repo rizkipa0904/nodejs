@@ -11,7 +11,7 @@ pipeline{
 
 		stage('Build') {
 			steps {
-				sh'docker-compose -f rafdev0904/docker-compose.yml up -d'
+				sh'docker-compose -f rafdev0904/nodejs/docker-compose.yml up -d'
 				
 			}
 		}
