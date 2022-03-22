@@ -1,9 +1,4 @@
-FROM node:13-alpine
-RUN mkdir -p /home/app
-COPY ./* /home/app/
-WORKDIR /home/app
+FROM nginx:stable
+COPY nginx.conf /etc/nginx/nginx.conf
 
-RUN npm install express
-CMD ["node", "server.js"]
-
-EXPOSE 6000
+EXPOSE 80
