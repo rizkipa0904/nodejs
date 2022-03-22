@@ -13,8 +13,8 @@ pipeline{
 		
 		stage('deploy') {
 			steps {
-				sh'sudo docker-compose buil'
-				sh'sudo docker-compose up -d'
+				sh'docker-compose build'
+				sh'docker-compose up -d'
 				
 			}
 		}
