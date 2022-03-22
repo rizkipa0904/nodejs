@@ -8,12 +8,6 @@ pipeline{
 	}
 
 	stages {
-	    
-	    stage('gitclone') {
-			steps {
-				git 'https://github.com/rizkipa0904/nodejs.git'
-			}
-		}
 
 		stage('Build') {
 			steps {
