@@ -1,4 +1,4 @@
-FROM nginx:stable
-COPY nginx.conf /etc/nginx/nginx.conf
+FROM nginx
+COPY static-html-directory /usr/share/nginx/html
 
 EXPOSE 80
