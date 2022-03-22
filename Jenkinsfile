@@ -11,7 +11,7 @@ pipeline{
 
 		stage('Build') {
 			steps {
-				sh'docker-compose build rafdev0904/nodejs .'
+				sh'docker-compose up rafdev0904/nodejs:latest .'
 			}
 		}
 
