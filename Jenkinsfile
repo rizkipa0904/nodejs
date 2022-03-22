@@ -8,15 +8,8 @@ pipeline{
 	}
 
 	stages {
-
-		stage('Build') {
-			steps {
-				sh'docker build -t rafdev0904/nodejs:latest . '
-				
-			}
-		}
 		
-		stage('deploy') {
+		stage('build') {
 			steps {
 				sh'docker-compose build'
 				
