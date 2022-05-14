@@ -23,7 +23,6 @@ pipeline{
 			steps {
 				sh 'docker login -u rafdev0904 -p Tkjmhd123'
 			}
-		}
 
 		stage('Push') {
 
