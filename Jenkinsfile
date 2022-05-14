@@ -2,15 +2,21 @@
 pipeline{
 
 	agent any
-
+	
+	environment {
+		
+	    	registry = "rafdev0904/nodejs"
+		dockerImage = ''
+	}
 	stages {
 		
-		stage('build') {
-			steps {
-				sh'docker-compose build'
-				
+		stage('Build Docker Image') {
+		    steps {
+			script {
+			    dockerImage = docker-compose.build registry + ":$BUILD_NUMBER"
+				}
+			    }
 			}
-		}
 
 		stage('Login') {
 
@@ -22,7 +28,9 @@ pipeline{
 		stage('Push') {
 
 			steps {
-				sh 'docker push rafdev0904/nodejs'
+				script {
+				dockerImage.push()
+				}
 			}
 		}
 	}
